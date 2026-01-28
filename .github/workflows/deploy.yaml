@@ -1,7 +1,7 @@
 name: Push and deploy to portainer
 on:
   pull_request:
-    branches: [ "live" ]
+    branches: [ "main" ]
 
 jobs:
   build:

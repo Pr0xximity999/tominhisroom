@@ -41,3 +41,7 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+
+
+# Jetbrains
+.idea/

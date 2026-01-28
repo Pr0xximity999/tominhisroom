@@ -25,49 +25,46 @@ for (let i = 0; i < elementOrdered.length; i++) {
 
 //Method for fading in the element
 function flickerIn(element){
-    let duration_ms = ((Math.random() / 3 ) + 0.2) * 10000 //between 1000 and 3000 ms
+    let duration_ms = 1000 + (Math.random() * 500) //between 1000 and 1500 ms
+    let progress = 0;
     let tick = 0;
-    let delay_ms = 30;
-    let stepsize = 30;
-
+    let steps = 30;
+    let delay_ms = duration_ms / steps;
     let flickered = false;
+    
     //Choppy-ness of the fade; lower is more choppy
-    let rounding = 10;
+    let rounding = 5;
 
     //Flicker happens between 10% and 30% into the transition
     const stopFlickerAt = Math.random() * 0.2 + 0.1;
     let flickercount = 0;
 
-
     let interval = setInterval(() => {
-        console.log(duration_ms)
-        tick += (stepsize / duration_ms);
-        if(!flickered && tick >= stopFlickerAt)
+
+        // 60% chance to increase in brightness, otherwise decrease
+        // This will create a flickering effect
+        if(Math.random() < 0.6)
         {
-            flickered = true;
-            rounding = 1000;
-            delay_ms = 5;
-            stepsize *= 40;
-            // const tmp = tick;
-            // element.style.opacity = 0.8;
-            //
-            // setTimeout(() =>{
-            //     element.style.opacity = tmp
-            // }, 100)
+            progress += (1 / steps);
         }
-        if(!flickered && Math.random() < 0.4 && flickercount < 10)
-        {
-            //Set the opacity back a bit (flicker
-            tick -= (stepsize / duration_ms) * 1.5;
-            flickercount += 1;
+        else {
+            progress -= (1 / steps)
         }
 
+        // Tick always goes up
+        tick += (1 / steps);
+        
+        // Apply new progress opacity
+        element.style.opacity = Math.round(progress * rounding) / rounding;
+        
         if(tick >= 1)
         {
+            progress = 1;
             tick = 1;
+            element.style.opacity = Math.round(progress * rounding) / rounding;
             clearInterval(interval);
         }
-        element.style.opacity = Math.round(tick * rounding) / rounding;
+
     }, delay_ms);
 }
 

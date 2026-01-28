@@ -1,9 +1,5 @@
 name: Push and deploy to portainer
 on:
-  push:
-    branches: [ "main" ]
-    # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
   pull_request:
     branches: [ "live" ]
 

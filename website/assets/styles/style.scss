@@ -46,25 +46,21 @@ body{
 /// Global positionings
 /// 
 
+/// Reactivity
+.flex-column, #mainBlogBody, #blogCardBody, #blogText{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row, #topRow, #blogCardTitle, #blogBody{
+  display: flex;
+  flex-direction: row;
+}
+
 /// Classes
 .outerMargin{
     margin: 1em;
 } 
-.centered{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.vertical-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.vertical-align{
-  display: flex;
-  flex-direction: column;
-}
 .cardBox{
     padding: 0.5em;
 }
@@ -72,10 +68,6 @@ body{
 /// Main pages
 #jermaHidden{
   position: fixed;
-}
-#aboutMe{
-    display: flex;
-    flex-direction: row;
 }
 
 /// Blog
@@ -86,39 +78,27 @@ body{
     margin: 0.5em;
 }
 #mainBlogBody{
-  display: flex;
-  flex-direction: column;
     margin-left: 1em;
     row-gap: 1em;
 }
 #blogBody{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 #topRow{
   margin: 0;
-  display: flex;
-  flex-direction: row;
 }
 #blogHeaderTitle{
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
 #blogCardBody{
-    display: flex;
-    flex-direction: column;
     row-gap: 0.5em;
 }
 #blogCardTitle{
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 #blogText{
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   padding: 1em;
 }
@@ -184,9 +164,6 @@ body{
 #jermaPhoto{
   width: 200vh; 
   height: 100vh; 
-}
-#welcomeCard{
-    width: 50%;
 }
 #documentationThumbnail{
   max-width: 18em;

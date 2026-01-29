@@ -21,16 +21,37 @@ body {
   box-shadow: 0px 0px 9px 0px hsl(110, 100%, 59%);
 }
 
-.flex-column, #mainBlogBody, #blogCardBody, #blogText {
+.flex-column, #mainBlogBody, #blogCardBody, #blogText, #sideBarRight {
   display: flex;
   flex-direction: column;
 }
 
-.flex-row, #topRow, #blogCardTitle, #blogBody {
+.flex-row, #blogCardTitle, #blogBody {
   display: flex;
   flex-direction: row;
 }
 
+@media screen and (max-width: 1100px) {
+  #sideBarLeft {
+    display: none;
+  }
+  #pageBody {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 650px) {
+  #topRow {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  #topRow {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
 .outerMargin {
   margin: 1em;
 }
@@ -41,6 +62,10 @@ body {
 
 #jermaHidden {
   position: fixed;
+}
+
+#sideBarRight {
+  justify-content: center;
 }
 
 .blogImg {
@@ -117,6 +142,10 @@ body {
   height: 100vh;
 }
 
+footer {
+  width: 69%;
+}
+
 #body {
   display: flex;
   justify-content: center;
@@ -128,16 +157,8 @@ body {
   min-width: 15em;
 }
 
-#sideBarRight {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 20%;
-}
-
-#mainBody {
+#pageBody {
   margin-bottom: 0%;
-  width: 70%;
 }
 
 #jermaHidden {
@@ -149,7 +170,7 @@ body {
   height: 100vh;
 }
 
-#documentationThumbnail {
+#documentationDiv, #documentationThumbnail {
   max-width: 18em;
 }
 

@@ -42,20 +42,50 @@ body{
 }
 
 
-///
-/// Global positionings
+/// 
+/// Reactivity
 /// 
 
-/// Reactivity
-.flex-column, #mainBlogBody, #blogCardBody, #blogText{
+.flex-column, #mainBlogBody, #blogCardBody, #blogText, #sideBarRight{
   display: flex;
   flex-direction: column;
 }
-
-.flex-row, #topRow, #blogCardTitle, #blogBody{
+.flex-row, #blogCardTitle, #blogBody{
   display: flex;
   flex-direction: row;
 }
+
+/// Screen size
+@media screen and (max-width: 1100px)
+{
+  #sideBarLeft{
+    display: none;
+  }
+  #pageBody{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 650px)
+{
+  #topRow{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 650px)
+{
+  #topRow{
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+///
+/// Global positionings
+/// 
 
 /// Classes
 .outerMargin{
@@ -68,6 +98,9 @@ body{
 /// Main pages
 #jermaHidden{
   position: fixed;
+}
+#sideBarRight{
+    justify-content: center;
 }
 
 /// Blog
@@ -139,6 +172,10 @@ body{
 }
 
 /// Main pages
+
+footer{
+  width: 69%;
+}
 #body{
     display: flex;
     justify-content: center;
@@ -148,15 +185,8 @@ body{
     max-width: 20em;
     min-width: 15em;
 }
-#sideBarRight{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 20%;
-}
-#mainBody{
+#pageBody{
     margin-bottom: 0%;
-    width: 70%;
 }
 #jermaHidden{
   width: 100%;
@@ -165,7 +195,7 @@ body{
   width: 200vh; 
   height: 100vh; 
 }
-#documentationThumbnail{
+#documentationDiv, #documentationThumbnail{
   max-width: 18em;
 }
 #quoteDiv{

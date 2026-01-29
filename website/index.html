@@ -14,19 +14,16 @@
 </head>
 
 <body id="background">
-    <div style="position: fixed; width: 100%;" id="jermaHidden" class="centered">
-        <img id="jermaPhoto" class="centered" src="https://i.imgflip.com/5euzvk.png" style="width: 200vh; height: 100vh; display: none;">
+    <div id="jermaHidden" class="centered">
+        <img id="jermaPhoto" class="centered" src="https://i.imgflip.com/5euzvk.png" style="display: none;">
     </div>
     <audio id="jermaSound" src="assets/audio/fnaf_scare.ogg"></audio>
     
-    <div id="crtDiv" class="crt" style="opacity: 1"></div>
-    <!-- <div id="ball"></div> -->
+    <div id="crtDiv" class="crt"></div>
     <div id="body">
         <div id="sideBarLeft">
-            <div class="cardBox glow outerMargin roundedBorders">
+            <div class="cardBox glow outerMargin">
                 <h1 id="sideBarLeftTitle">W sidebar</h1>
-                <div id="blogCardBody">
-                </div>
             </div>
         </div>
         <div id="mainBody">
@@ -47,15 +44,15 @@
                         }">Click for jerma jumpscare</button> 
                 </div>
                 <div id="topRightDiv1">
-                    <div id="documentationDiv" class="cardBox glow outerMargin roundedBorders">
+                    <div id="documentationDiv" class="cardBox glow outerMargin r10">
                         <a href="https://docs.tominhisroom.dev">
-                            <img style="width: 18em;" src="https://docs.tominhisroom.dev/static/og-image.png" alt="the clickable image to my docs and notes website">
+                            <img id="documentationThumbnail" src="https://docs.tominhisroom.dev/static/og-image.png" alt="the clickable image to my docs and notes website">
                         </a>
                     </div>
                 </div>
                 <div id="topRightDiv2" class="vertical-align">
-                    <div id="quoteDiv" style="margin-bottom: 0;" class="cardBox glow outerMargin vertical-center">
-                        <h4>>And i watched the water unfold~ </h4>
+                    <div id="quoteDiv" class="cardBox glow outerMargin vertical-center">
+                        <h4>>And i watched the water unfold~</h4>
                     </div>
                     <div id="poopStoneDiv" class="cardBox glow outerMargin">
                         <h3><a class="noGlitch" href="https://noita.wiki.gg/wiki/Kakkakikkare" target="_blank">NOITA POOP STONE</a></h3>
@@ -64,8 +61,8 @@
                 </div>  
 
             </div>
-            <div id="infoCard" class="cardBox glow outerMargin">
-                <div id="infoCardRight">
+            <div id="aboutMe" class="cardBox glow outerMargin">
+                <div id="aboutmeLeft">
                     <h4>Some info about me:</h4>
                     <ul>
                         <li>My name is Thomas</li>
@@ -73,7 +70,7 @@
                         <li>I like cats :3</li>
                     </ul>
                 </div>
-                <div id="infoCardLeft">
+                <div id="aboutmeRight">
                     <p>I made this website since ive seen a really cool one and wanted to make my own :3:3</p>
                     <p>Expect this site to change a lot since im constantly working on it, so the entire look can
                         suddenly change</p>
@@ -83,9 +80,9 @@
                 </div>
             </div>
             <br>
-            <div id="gifDrawer1" class="cardBox glow outerMargin">
-                <h2 style="margin-bottom: 0;">Some cool gifs(or not gifs) my friends told me to add :3</h2>
-                <div id="gifDrawer2">
+            <div id="gifDrawer" class="cardBox glow outerMargin">
+                <h2>Some cool gifs(or not gifs) my friends told me to add :3</h2>
+                <div id="gifDrawerContents">
                     <script src="scripts/imagedrawer.js" defer></script>
                 </div>
                 <p>^scrollbar^</p>
@@ -100,7 +97,7 @@
             </footer>
         </div>
         <div id="sideBarRight">
-            <div id="toDoList" class="cardBox glow outerMargin roundedBorders">
+            <div id="toDoList" class="cardBox glow outerMargin r10">
                 <h1>TODO List:</h1>
                 <p>Some stuff im probably going to put onto here (or not lol)</p>
                 <br>

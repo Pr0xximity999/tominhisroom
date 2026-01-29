@@ -14,81 +14,103 @@
 </head>
 
 <body id="background">
-    <div style="position: fixed; width: 100%;" id="jermaHidden" class="centered">
-        <img id="jermaPhoto" class="centered" src="https://i.imgflip.com/5euzvk.png" style="width: 200vh; height: 100vh; display: none;">
+    <div id="jermaHidden">
+        <img id="jermaPhoto" src="https://i.imgflip.com/5euzvk.png" style="display: none;">
     </div>
     <audio id="jermaSound" src="assets/audio/fnaf_scare.ogg"></audio>
     
-    <div id="crtDiv" class="crt" style="opacity: 1"></div>
-    <!-- <div id="ball"></div> -->
+    <div id="crtDiv" class="crt"></div>
     <div id="body">
         <div id="sideBarLeft">
-            <div class="cardBox glow outerMargin roundedBorders">
+            <div class="cardBox glow outerMargin">
                 <h1 id="sideBarLeftTitle">W sidebar</h1>
-                <div id="blogCardBody">
-                </div>
             </div>
         </div>
-        <div id="mainBody">
-            <div id="topRow">
-                <div id="welcomeCard" class="cardBox glow outerMargin">
-                    <h1>Hellooo</h1>
-                    <p>Welcome to my amazing website!!!</p>
-                    <p></p>
-                    <a href="pages/fridge.html">Click for cool plant in fridge</a><br>
-                    <button id="jermaButton" onclick="{
-                        var jermaImg = document.getElementById('jermaPhoto')
-                        jermaImg.style.display = 'block';
-                        document.getElementById('jermaSound').play()
-                        new Promise(resolve => setTimeout(resolve, '2000')).then(() =>{
-                            document.getElementById('jermaHidden').innerHTML = '';
-                            document.getElementById('jermaButton').remove();
-                        });
-                        }">Click for jerma jumpscare</button> 
-                </div>
-                <div id="topRightDiv1">
-                    <div id="documentationDiv" class="cardBox glow outerMargin roundedBorders">
-                        <a href="https://docs.tominhisroom.dev">
-                            <img style="width: 18em;" src="https://docs.tominhisroom.dev/static/og-image.png" alt="the clickable image to my docs and notes website">
-                        </a>
+        <div>
+            <div id="pageBody" class="flex-row">
+                <div id="mainBody" >
+                    <div id="topRow">
+                        <div id="welcomeCard" class="cardBox glow outerMargin">
+                            <h1>Hellooo</h1>
+                            <p>Welcome to my amazing website!!!</p>
+                            <p></p>
+                            <a href="pages/fridge.html">Click for cool plant in fridge</a><br>
+                            <button id="jermaButton" onclick="{
+                                var jermaImg = document.getElementById('jermaPhoto')
+                                jermaImg.style.display = 'block';
+                                document.getElementById('jermaSound').play()
+                                new Promise(resolve => setTimeout(resolve, '2000')).then(() =>{
+                                    document.getElementById('jermaHidden').innerHTML = '';
+                                    document.getElementById('jermaButton').remove();
+                                });
+                                }">Click for jerma jumpscare</button> 
+                        </div>
+                        <div>
+                            <div id="documentationDiv" class="cardBox glow outerMargin r10">
+                                <a href="https://docs.tominhisroom.dev">
+                                    <img id="documentationThumbnail" src="https://docs.tominhisroom.dev/static/og-image.png" alt="the clickable image to my docs and notes website">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-column">
+                            <div id="quoteDiv" class="cardBox glow outerMargin">
+                                <h4>>And i watched the water unfold~</h4>
+                            </div>
+                            <div id="poopStoneDiv" class="cardBox glow outerMargin">
+                                <h3><a class="noGlitch" href="https://noita.wiki.gg/wiki/Kakkakikkare" target="_blank">NOITA POOP STONE</a></h3>
+                                <img src="https://noita.wiki.gg/images/3/3d/Item_kakke.png" alt="Noita poop stone">
+                            </div>
+                        </div>  
+        
+                    </div>
+                    <div id="aboutMe" class="cardBox glow outerMargin .flex-row">
+                        <div id="aboutmeLeft">
+                            <h4>Some info about me:</h4>
+                            <ul>
+                                <li>My name is Thomas</li>
+                                <li>I like to program even though i lack a whole lot of motivation lol</li>
+                                <li>I like cats :3</li>
+                            </ul>
+                        </div>
+                        <div id="aboutmeRight">
+                            <p>I made this website since ive seen a really cool one and wanted to make my own :3:3</p>
+                            <p>Expect this site to change a lot since im constantly working on it, so the entire look can
+                                suddenly change</p>
+                            <p>Inspired by: </p>
+                            <a href="https://dimden.dev/" target="_blank">
+                                <img src="https://dimden.dev/services/images/88x31.gif" alt="dimden"></a><br>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="gifDrawer" class="cardBox glow outerMargin">
+                        <h2>Some cool gifs(or not gifs) my friends told me to add :3</h2>
+                        <div id="gifDrawerContents">
+                            <script src="scripts/imagedrawer.js" defer></script>
+                        </div>
+                        <p>^scrollbar^</p>
                     </div>
                 </div>
-                <div id="topRightDiv2" class="vertical-align">
-                    <div id="quoteDiv" style="margin-bottom: 0;" class="cardBox glow outerMargin vertical-center">
-                        <h4>>And i watched the water unfold~ </h4>
+                <div id="sideBarRight">
+                    <div id="toDoList" class="cardBox glow outerMargin r10">
+                        <h1>TODO List:</h1>
+                        <p>Some stuff im probably going to put onto here (or not lol)</p>
+                        <br>
+                        <ul>
+                            <li><b class="glitchText">DONE | </b>Find a good font to use lol</li>
+                            <li><b class="glitchText">DONE |</b> blog page</li>
+                            <li><b class="glitchText">IN PROGRESS |</b>A page for my photos</li>
+                            <li>Mobile support</li>
+                            <li>Some place to put my updates on (probably also the blog page lol)</li>
+                            <li>A daily user counter</li>
+                            <li>An about me page</li>
+                            <li>Improve the styling</li>
+                            <li>A place to post pictures ive made</li>
+                            <li>Some button that pulls up a funny image or meme</li>
+                            <li>Mobile support</li>
+                            <li>etc</li>
+                        </ul>
                     </div>
-                    <div id="poopStoneDiv" class="cardBox glow outerMargin">
-                        <h3><a class="noGlitch" href="https://noita.wiki.gg/wiki/Kakkakikkare" target="_blank">NOITA POOP STONE</a></h3>
-                        <img src="https://noita.wiki.gg/images/3/3d/Item_kakke.png" alt="Noita poop stone">
-                    </div>
-                </div>  
-
-            </div>
-            <div id="infoCard" class="cardBox glow outerMargin">
-                <div id="infoCardRight">
-                    <h4>Some info about me:</h4>
-                    <ul>
-                        <li>My name is Thomas</li>
-                        <li>I like to program even though i lack a whole lot of motivation lol</li>
-                        <li>I like cats :3</li>
-                    </ul>
                 </div>
-                <div id="infoCardLeft">
-                    <p>I made this website since ive seen a really cool one and wanted to make my own :3:3</p>
-                    <p>Expect this site to change a lot since im constantly working on it, so the entire look can
-                        suddenly change</p>
-                    <p>Inspired by: </p>
-                    <a href="https://dimden.dev/" target="_blank">
-                        <img src="https://dimden.dev/services/images/88x31.gif" alt="dimden"></a><br>
-                </div>
-            </div>
-            <br>
-            <div id="gifDrawer1" class="cardBox glow outerMargin">
-                <h2 style="margin-bottom: 0;">Some cool gifs(or not gifs) my friends told me to add :3</h2>
-                <div id="gifDrawer2">
-                    <script src="scripts/imagedrawer.js" defer></script>
-                </div>
-                <p>^scrollbar^</p>
             </div>
             <footer class="cardBox glow outerMargin">
                 <p>Made by me :3 2023</p>
@@ -99,31 +121,10 @@
                 <a href="https://hotlinewebring.club/tomhisroom/next">---></a> 
             </footer>
         </div>
-        <div id="sideBarRight">
-            <div id="toDoList" class="cardBox glow outerMargin roundedBorders">
-                <h1>TODO List:</h1>
-                <p>Some stuff im probably going to put onto here (or not lol)</p>
-                <br>
-                <ul>
-                    <li><b class="glitchText">DONE | </b>Find a good font to use lol</li>
-                    <li><b class="glitchText">DONE |</b> blog page</li>
-                    <li><b class="glitchText">IN PROGRESS |</b>A page for my photos</li>
-                    <li>Mobile support</li>
-                    <li>Some place to put my updates on (probably also the blog page lol)</li>
-                    <li>A daily user counter</li>
-                    <li>An about me page</li>
-                    <li>Improve the styling</li>
-                    <li>A place to post pictures ive made</li>
-                    <li>Some button that pulls up a funny image or meme</li>
-                    <li>Mobile support</li>
-                    <li>etc</li>
-                </ul>
-            </div>
-        </div>
     </div>
 </body>
 <audio id="electricalHum" src="assets/audio/ElectricalHum.wav" loop></audio>
-<script src="scripts/startup-flicker.js"></script>
+<!-- <script src="scripts/startup-flicker.js"></script> -->
 <script>
     window.onload = function(){
         //document.getElementById("electricalHum").play();

@@ -1,11 +1,19 @@
 
+///
+/// Variables
+/// 
+
 $bg-color: black;
 $c-hue: 110;
 $font-color: hsl($c-hue, 100%, 59%);
 $card-color: hsl($c-hue, 100%, 8%);
 $border-style:  3px solid $font-color;
 
-//All text fields
+
+///
+/// All text fields
+/// 
+
 p, h1, h2, h3, h4, h5, h6, a, ul, ol, li{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: $font-color;
@@ -16,12 +24,229 @@ p, h1, h2, h3, h4, h5, h6, a, ul, ol, li{
       animation: textShadow 1.6s infinite;
 }
 
-//Background
+
+/// 
+/// Global colors
+/// 
+
+body{
+    background-color: $bg-color;
+}
+
+.cardBox {
+  background-color: $card-color;
+}
+
+.glow{
+    box-shadow: 0px 0px 9px 0px $font-color;
+}
+
+
+/// 
+/// Reactivity
+/// 
+
+.flex-column, #mainBlogBody, #blogCardBody, #blogText, #sideBarRight{
+  display: flex;
+  flex-direction: column;
+}
+.flex-row, #blogCardTitle, #blogBody{
+  display: flex;
+  flex-direction: row;
+}
+
+/// Screen size
+@media screen and (max-width: 1100px)
+{
+  #sideBarLeft{
+    display: none;
+  }
+  #pageBody{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 650px)
+{
+  #topRow{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 650px)
+{
+  #topRow{
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+///
+/// Global positionings
+/// 
+
+/// Classes
+.outerMargin{
+    margin: 1em;
+} 
+.cardBox{
+    padding: 0.5em;
+}
+
+/// Main pages
+#jermaHidden{
+  position: fixed;
+}
+#sideBarRight{
+    justify-content: center;
+}
+
+/// Blog
+.blogImg{
+    margin-top: 3em;
+}
+.gifDrawerImage{
+    margin: 0.5em;
+}
+#mainBlogBody{
+    margin-left: 1em;
+    row-gap: 1em;
+}
+#blogBody{
+    justify-content: center;
+}
+#topRow{
+  margin: 0;
+}
+#blogHeaderTitle{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+#blogCardBody{
+    row-gap: 0.5em;
+}
+#blogCardTitle{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#blogText{
+  overflow: hidden;
+  padding: 1em;
+}
+
+
+///
+/// Global sizes
+/// 
+
+/// Classes
+.cardBox{
+    border-radius: 3px; 
+}
+.newlineOnEnter{
+  white-space: pre-line;
+}
+.largerPText{
+  font-size: 1.1rem;
+}
+.newlineOnEnter>img{
+  width: 80%;
+}
+.r10{
+    border-radius: 10px; 
+}
+.blogImg{
+    width: 60%;
+}
+.gifDrawerImage{
+    height: 100%;
+    width: 60%;
+    min-width: 40%;
+}
+
+///Background
 #background{
   height: 100vh;
 }
 
-//Animations
+/// Main pages
+
+footer{
+  width: 69%;
+}
+#body{
+    display: flex;
+    justify-content: center;
+}
+#sideBarLeft{
+    width: 20%;
+    max-width: 20em;
+    min-width: 15em;
+}
+#pageBody{
+    margin-bottom: 0%;
+}
+#jermaHidden{
+  width: 100%;
+}
+#jermaPhoto{
+  width: 200vh; 
+  height: 100vh; 
+}
+#documentationDiv, #documentationThumbnail{
+  max-width: 18em;
+}
+#quoteDiv{
+  margin-bottom: 0;
+}
+#aboutMe{
+    column-gap: 1em;
+}
+#gifDrawer{
+    height: 20em;
+    padding: 0.5em;
+}
+#gifDrawerContents{
+    height: 85%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+footer{
+    padding-top: 1em;  
+}
+
+/// Blog styling
+#mainBlogBody{
+    width: 80%;
+}
+#blogSideBarLeft{
+    width: 8%;
+}
+
+
+///
+/// Misc
+/// 
+
+// Don't glitch the noGlitch hoverable elements
+a[href]:hover:not(.noGlitch){
+  animation: textShadowBig 0.2s infinite;
+}
+
+.clickable{
+    cursor: pointer;
+}
+.cardBox{
+    border: $border-style;
+}
+
+
+///
+/// Animations
+///
 
 //Crt lines on the screen
 .crt::after {
@@ -155,156 +380,3 @@ p, h1, h2, h3, h4, h5, h6, a, ul, ol, li{
       text-shadow: 0.6208764473832513px -10 1px rgba(0,30,255,0.5), -0.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     }
   }
-
-
-//Global properties
-a[href]:hover:not(.noGlitch){
-  animation: textShadowBig 0.2s infinite;
-}
-
-//Global classes
-.clickable{
-    cursor: pointer;
-}
-.cardBox{
-    border: $border-style;
-    background-color: $card-color;
-    padding: 0.5em;
-}
-.outerMargin{
-    margin: 1em;
-}
-.glow{
-    box-shadow: 0px 0px 9px 0px $font-color;
-}
-.centered{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.newlineOnEnter{
-  white-space: pre-line;
-}
-.largerPText{
-  font-size: 1.1rem;
-}
-
-.newlineOnEnter>img{
-  width: 80%;
-}
-.vertical-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.vertical-align{
-  display: flex;
-  flex-direction: column;
-}
-
-
-//Makes an element have rounded borders
-.roundedBorders{
-    border-radius: 10px; 
-}
-
-//The background
-body{
-    background-color: $bg-color;
-}
-
-//Blog styling
-#mainBlogBody{
-    margin-left: 1em;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1em;
-    width: 80%;
-}
-#blogSideBarLeft{
-    width: 8%;
-}
-#blogBody{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-#topRow{
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-}
-#blogHeaderTitle{
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-}
-#blogCardBody{
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5em;
-}
-#blogCardTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-#blogText{
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-
-.blogImg{
-    width: 60%;
-    margin-top: 3em;
-}
-
-//Main page stuff
-#body{
-    display: flex;
-    justify-content: center;
-}
-#sideBarLeft{
-    width: 20%;
-}
-#sideBarRight{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 20%;
-}
-#mainBody{
-    margin-bottom: 0%;
-    width: 70%;
-}
-#welcomeCard{
-    width: 50%;
-}
-#infoCard{
-    display: flex;
-    flex-direction: row;
-    column-gap: 1em;
-}
-.gifDrawerImages{
-    height: 100%;
-    width: 60%;
-    min-width: 40%;
-    margin: 0.5em;
-}
-#gifDrawer1{
-    height: 20em;
-    padding: 0.5em;
-}
-#gifDrawer2{
-    height: 85%;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-footer{
-    padding-top: 1em;  
-}

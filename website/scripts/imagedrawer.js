@@ -1,13 +1,13 @@
 fetch("./assets/images/image-drawer/images.json")
     .then(response => response.json())
     .then(data => {
-        var div = document.getElementById('gifDrawerContents');
+        var div = document.getElementById('gifCarrouselContents');
         data.forEach(image => {
             if(image.split('.')[1] !== 'json')
             {
                 var img = new Image();
                 img.src = `./assets/images/image-drawer/${image}`;
-                img.className = 'gifDrawerImage';
+                img.className = 'gifCarrouselImage';
                 div.appendChild(img);
             }
         });

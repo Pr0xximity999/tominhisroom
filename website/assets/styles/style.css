@@ -21,35 +21,45 @@ body {
   box-shadow: 0px 0px 9px 0px hsl(110, 100%, 59%);
 }
 
-.flex-column, #mainBlogBody, #blogCardBody, #blogText, #sideBarRight {
+.flex-column {
   display: flex;
   flex-direction: column;
 }
 
-.flex-row, #blogCardTitle, #blogBody {
+.flex-row {
   display: flex;
   flex-direction: row;
 }
 
 @media screen and (max-width: 1100px) {
-  #sideBarLeft {
-    display: none;
-  }
   #pageBody {
     display: flex;
     flex-direction: column;
   }
 }
-@media screen and (min-width: 650px) {
-  #topRow {
-    display: grid;
-    grid-template-columns: auto auto auto;
+@media screen and (min-width: 1100px) {
+  #docsDiv {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-@media screen and (max-width: 650px) {
+@media screen and (min-width: 900px) {
   #topRow {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  #docsDiv {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  #sideBarLeft {
+    display: none;
+  }
+  #topRow {
+    display: flex;
+    flex-direction: column;
   }
 }
 .outerMargin {
@@ -60,20 +70,20 @@ body {
   padding: 0.5em;
 }
 
-#jermaHidden {
-  position: fixed;
-}
-
-#sideBarRight {
-  justify-content: center;
+.gifCarrouselImage {
+  margin: 0.5em;
 }
 
 .blogImg {
   margin-top: 3em;
 }
 
-.gifDrawerImage {
-  margin: 0.5em;
+#jermaHidden {
+  position: fixed;
+}
+
+#sideBarRight {
+  justify-content: center;
 }
 
 #mainBlogBody {
@@ -85,22 +95,9 @@ body {
   justify-content: center;
 }
 
-#topRow {
-  margin: 0;
-}
-
 #blogHeaderTitle {
   font-size: 1.5em;
   margin-bottom: 0.5em;
-}
-
-#blogCardBody {
-  row-gap: 0.5em;
-}
-
-#blogCardTitle {
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 #blogText {
@@ -124,7 +121,7 @@ body {
   width: 80%;
 }
 
-.r10 {
+.rounded {
   border-radius: 10px;
 }
 
@@ -132,9 +129,9 @@ body {
   width: 60%;
 }
 
-.gifDrawerImage {
+.gifCarrouselImage {
   height: 100%;
-  width: 60%;
+  width: 40%;
   min-width: 40%;
 }
 
@@ -143,7 +140,7 @@ body {
 }
 
 footer {
-  width: 69%;
+  margin: auto;
 }
 
 #body {
@@ -161,17 +158,14 @@ footer {
   margin-bottom: 0%;
 }
 
-#jermaHidden {
-  width: 100%;
-}
-
-#jermaPhoto {
-  width: 200vh;
+#jermaHidden, #jermaPhoto {
+  width: 100vw;
   height: 100vh;
 }
 
-#documentationDiv, #documentationThumbnail {
+#docsDiv, #docsThumbnail {
   max-width: 18em;
+  max-height: 180px;
 }
 
 #quoteDiv {
@@ -182,12 +176,12 @@ footer {
   column-gap: 1em;
 }
 
-#gifDrawer {
+#gifCarrousel {
   height: 20em;
   padding: 0.5em;
 }
 
-#gifDrawerContents {
+#gifCarrouselContents {
   height: 85%;
   display: flex;
   overflow-x: auto;

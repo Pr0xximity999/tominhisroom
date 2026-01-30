@@ -46,40 +46,55 @@ body{
 /// Reactivity
 /// 
 
-.flex-column, #mainBlogBody, #blogCardBody, #blogText, #sideBarRight{
+.flex-column{
   display: flex;
   flex-direction: column;
 }
-.flex-row, #blogCardTitle, #blogBody{
+.flex-row{
   display: flex;
   flex-direction: row;
 }
 
-/// Screen size
+/// Screen sizes
+/// max = up to that vlue
+/// min = above that value
 @media screen and (max-width: 1100px)
 {
-  #sideBarLeft{
-    display: none;
-  }
   #pageBody{
     display: flex;
     flex-direction: column;
   }
 }
 
-@media screen and (min-width: 650px)
-{
-  #topRow{
-    display: grid;
-    grid-template-columns: auto auto auto;
+@media screen and (min-width: 1100px){
+  #docsDiv {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media screen and (max-width: 650px)
+
+@media screen and (min-width: 900px) // Mobile
 {
   #topRow{
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #docsDiv {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 900px)
+{
+  #sideBarLeft{
+    display: none;
+  }
+  #topRow{
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -94,6 +109,12 @@ body{
 .cardBox{
     padding: 0.5em;
 }
+.gifCarrouselImage{
+    margin: 0.5em;
+}
+.blogImg{
+    margin-top: 3em;
+}
 
 /// Main pages
 #jermaHidden{
@@ -104,12 +125,6 @@ body{
 }
 
 /// Blog
-.blogImg{
-    margin-top: 3em;
-}
-.gifDrawerImage{
-    margin: 0.5em;
-}
 #mainBlogBody{
     margin-left: 1em;
     row-gap: 1em;
@@ -117,19 +132,9 @@ body{
 #blogBody{
     justify-content: center;
 }
-#topRow{
-  margin: 0;
-}
 #blogHeaderTitle{
     font-size: 1.5em;
     margin-bottom: 0.5em;
-}
-#blogCardBody{
-    row-gap: 0.5em;
-}
-#blogCardTitle{
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 #blogText{
   overflow: hidden;
@@ -154,15 +159,15 @@ body{
 .newlineOnEnter>img{
   width: 80%;
 }
-.r10{
+.rounded{
     border-radius: 10px; 
 }
 .blogImg{
     width: 60%;
 }
-.gifDrawerImage{
+.gifCarrouselImage{
     height: 100%;
-    width: 60%;
+    width: 40%;
     min-width: 40%;
 }
 
@@ -172,9 +177,8 @@ body{
 }
 
 /// Main pages
-
 footer{
-  width: 69%;
+  margin: auto;
 }
 #body{
     display: flex;
@@ -188,15 +192,13 @@ footer{
 #pageBody{
     margin-bottom: 0%;
 }
-#jermaHidden{
-  width: 100%;
+#jermaHidden, #jermaPhoto{
+  width: 100vw; 
+  height: 100vh;
 }
-#jermaPhoto{
-  width: 200vh; 
-  height: 100vh; 
-}
-#documentationDiv, #documentationThumbnail{
+#docsDiv, #docsThumbnail{
   max-width: 18em;
+  max-height: 180px;
 }
 #quoteDiv{
   margin-bottom: 0;
@@ -204,11 +206,11 @@ footer{
 #aboutMe{
     column-gap: 1em;
 }
-#gifDrawer{
+#gifCarrousel{
     height: 20em;
     padding: 0.5em;
 }
-#gifDrawerContents{
+#gifCarrouselContents{
     height: 85%;
     display: flex;
     overflow-x: auto;

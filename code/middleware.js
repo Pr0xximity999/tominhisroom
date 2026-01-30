@@ -26,25 +26,22 @@ function logVisit (req, res) {
 }
 
 function readImages (req, res) {
-    fs.readdir(`${assets_directory}/images/image-drawer/`, (err, files) =>{
-    let images = [];
+    fs.readdir(`${assets_directory}/images/image-drawer/`, (err, files) =>
+    {
         if(err)
         {
             console.log("Error reading images: " + err)
         }
         else
         {
-            files.forEach(file => {
-                images.push(file)
-            })
+            let data = JSON.stringify(files);
+            fs.writeFile(`${assets_directory}/images/image-drawer/images.json`, data, (err) => {
+                if(err)
+                {
+                    console.log("Errir writing image json: " + data)
+                }
+            });
         }
-        let data = JSON.stringify(images);
-        fs.writeFile(`${assets_directory}/images/image-drawer/images.json`, data, (err) => {
-            if(err)
-            {
-                console.log("Errir writing image json: " + data)
-            }
-        });
     })
 }
 

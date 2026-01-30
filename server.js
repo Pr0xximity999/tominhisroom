@@ -26,7 +26,7 @@ app.use((req, res, next) =>{
 
     //check if the subdirectory is a page or landingpage
     //Prevents running these methods for every asset that's loaded
-    if(['index.html', 'pages'].includes(subdirectory[1])) {
+    if(req.url === '/' || ['pages'].includes(subdirectory[1])) {
         logVisit(req, res);
         readImages(req, res);
     }

@@ -22,14 +22,14 @@
     <div id="crtDiv" class="crt"></div>
     <div id="body">
         <div id="sideBarLeft">
-            <div class="cardBox glow outerMargin">
+            <div class="cardBox flickerIn glow outerMargin">
                 <h1 id="sideBarLeftTitle">W sidebar</h1>
             </div>
         </div>
         <div id="pageBody" class="flex-row">
             <div id="mainBody">
                 <div id="topRow">
-                    <div id="welcomeCard" class="cardBox glow outerMargin">
+                    <div id="welcomeCard" class="cardBox flickerIn glow outerMargin">
                         <h1>Hellooo</h1>
                         <p>Welcome to my amazing website!!!</p>
                         <p></p>
@@ -49,22 +49,22 @@
                             });
                             }">Click for jerma jumpscare</button> 
                     </div>
-                    <div id="docsDiv" class="cardBox glow outerMargin rounded">
+                    <div id="docsDiv" class="cardBox flickerIn glow outerMargin rounded">
                         <a href="https://docs.tominhisroom.dev">
                             <img id="docsThumbnail" src="https://docs.tominhisroom.dev/static/og-image.png" alt="the clickable image to my docs and notes website">
                         </a>
                     </div>
                     <div class="flex-column">
-                        <div id="quoteDiv" class="cardBox glow outerMargin">
-                            <h4>>And i watched the water unfold~</h4>
+                        <div id="quoteDiv" class="cardBox flickerIn glow outerMargin">
+                            <h4 class="slowWriter">>And i watched the water unfold~</h4>
                         </div>
-                        <div id="poopStoneDiv" class="cardBox glow outerMargin">
+                        <div id="poopStoneDiv" class="cardBox flickerIn glow outerMargin">
                             <h3><a class="noGlitch" href="https://noita.wiki.gg/wiki/Kakkakikkare" target="_blank">NOITA POOP STONE</a></h3>
                             <img src="https://noita.wiki.gg/images/3/3d/Item_kakke.png" alt="Noita poop stone">
                         </div>
                     </div>  
                 </div>
-                <div id="aboutMe" class="cardBox glow outerMargin flex-row">
+                <div id="aboutMe" class="cardBox flickerIn glow outerMargin flex-row">
                     <div id="aboutmeLeft">
                         <p class="newlineOnEnter"><b>Heya! I'm Thomas 🌻</b>
                             I'm a comp-sci student and scp enjoyer.
@@ -78,45 +78,49 @@
                         <p class="newlineOnEnter">I made this website since ive seen a really cool one and wanted to make my own :3:3
                             Expect this site to change a lot since im constantly working on it, so the entire look can suddenly change.
                         </p>
-                        <p>Inspired by: </p>
-                        <a href="https://dimden.dev/" target="_blank">
-                            <img src="https://dimden.dev/services/images/88x31.gif" alt="dimden">
-                        </a>
                     </div>
                 </div>
-                <div id="gifCarrousel" class="cardBox glow outerMargin flex-column">
+                <div id="gifCarrousel" class="cardBox flickerIn glow outerMargin flex-column">
                     <h2>Some cool gifs(or not gifs) my friends told me to add :3</h2>
                     <div id="gifCarrouselContents">
                         <script src="scripts/imagedrawer.js" defer></script>
                     </div>
                     <p>^scrollbar^</p>
                 </div>
-                <div class="cardBox glow outerMargin">
-                    <p>Made by me :3 2023</p>
-                    <p><a href="https://docs.tominhisroom.dev">My docs website!!!!!</a></p>
-                    <br>
-                    <a href="https://hotlinewebring.club/tomhisroom/previous"><---</a>
-                    <a href="https://hotlinewebring.club">super awesome cool webring (its a bit broken, sorry)</a>
-                    <a href="https://hotlinewebring.club/tomhisroom/next">---></a> 
+                <div id="mainPageFooter" class="cardBox flickerIn glow outerMargin flex-row">
+                    <div>
+                        <p>Made by me :3 2023</p>
+                        <p><a href="https://docs.tominhisroom.dev">My docs website!!!!!</a></p>
+                        <br>
+                        <a href="https://hotlinewebring.club/tomhisroom/previous"><---</a>
+                        <a href="https://hotlinewebring.club">super awesome cool webring (its a bit broken, sorry)</a>
+                        <a href="https://hotlinewebring.club/tomhisroom/next">---></a> 
+                    </div>
+                    <div>
+                        <p>Inspired by: </p>
+                        <a href="https://dimden.dev/" target="_blank">
+                            <img src="https://dimden.dev/services/images/88x31.gif" alt="dimden">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div id="sideBarRight" class="flex-column">
-                <div id="toDoList" class="cardBox glow outerMargin rounded">
+                <div id="toDoList" class="cardBox flickerIn glow outerMargin rounded">
                     <h1>TODO List:</h1>
                     <p>Some stuff im probably going to put onto here (or not lol)</p>
                     <br>
                     <ul>
-                        <li><b class="glitchText">DONE | </b>Find a good font to use lol</li>
+                        <li><b class="glitchText">DONE |</b> Find a good font to use lol</li>
                         <li><b class="glitchText">DONE |</b> blog page</li>
+                        <li><b class="glitchText">DONE |</b> Mobile support</li>
                         <li><b class="glitchText">IN PROGRESS |</b>A page for my photos</li>
-                        <li>Mobile support</li>
+                        <li><b class="glitchText">IN PROGRESS |</b>A pretty quotes block with animation</li>
                         <li>Some place to put my updates on (probably also the blog page lol)</li>
                         <li>A daily user counter</li>
                         <li>An about me page</li>
                         <li>Improve the styling</li>
                         <li>A place to post pictures ive made</li>
                         <li>Some button that pulls up a funny image or meme</li>
-                        <li>Mobile support</li>
                         <li>etc</li>
                     </ul>
                 </div>
@@ -125,11 +129,14 @@
     </div>
 </body>
 
-<audio id="electricalHum" src="assets/audio/ElectricalHum.wav" loop></audio>
-<!-- <script src="scripts/startup-flicker.js"></script> -->
+<audio id="electricalHum" loop>
+    <source src="assets/audio/ElectricalHum.wav" type="audio/wav">
+</audio>
+<script src="scripts/startup-flicker.js"></script>
+<script src="scripts/slowWriter.js"></script>
 <script>
     window.onload = function(){
-        //document.getElementById("electricalHum").play();
+        // document.getElementById("electricalHum").play();
     }
     function openBlog(url){
         window.open('pages/blogs/' + url, "_self");

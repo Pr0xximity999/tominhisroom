@@ -1,5 +1,5 @@
 ﻿//Get all elements with the cardbox class
-let elements = document.getElementsByClassName("cardBox");
+let elements = document.getElementsByClassName("flickerIn");
 
 //Make everything invisible and put it in a list
 let elementOrdered= [];
@@ -39,6 +39,8 @@ function flickerIn(element){
     const stopFlickerAt = Math.random() * 0.2 + 0.1;
     let flickercount = 0;
 
+    element.dataset.flickering = "true"
+
     let interval = setInterval(() => {
 
         // 60% chance to increase in brightness, otherwise decrease
@@ -62,7 +64,9 @@ function flickerIn(element){
             progress = 1;
             tick = 1;
             element.style.opacity = Math.round(progress * rounding) / rounding;
+            delete element.dataset.flickering;
             clearInterval(interval);
+            return
         }
 
     }, delay_ms);

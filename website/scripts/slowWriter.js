@@ -12,18 +12,18 @@ function waitUntil(checkedElementid, callback)
             clearInterval(interval);
             callback();
         }
-    }, 500);
+    }, 2000);
 }
 
 
+// Loops trough all grabbed elements
 for(let element of swElements)
 {
+    // Save the text of the element
     var wholeText = element.textContent;
-    element.textContent = ""
-
     var checkedElement = element;
     var elementContainsClass = false;
-
+    
     // Grabs the nearest parent class that has the flickerIn class
     while(!elementContainsClass)
     {
@@ -37,11 +37,14 @@ for(let element of swElements)
             elementContainsClass = true;
         }
     }
-    
+            
+    // Clear the text
+    element.textContent = ""
+
     // Wait until the element flickered in and then start writing
     waitUntil(checkedElement.id, async () => {
         for (let i = 0; i < wholeText.length; i++) {     
-            await delay(200);
+            await delay(100);
             var letter = wholeText.charAt(i);
             element.textContent += letter;
         }

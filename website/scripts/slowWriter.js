@@ -12,7 +12,7 @@ function waitUntil(checkedElementid, callback)
             clearInterval(interval);
             callback();
         }
-    }, 500);
+    }, 2000);
 }
 
 
@@ -44,7 +44,7 @@ for(let element of swElements)
     // Wait until the element flickered in and then start writing
     waitUntil(checkedElement.id, async () => {
         for (let i = 0; i < wholeText.length; i++) {     
-            await delay(200);
+            await delay(100);
             var letter = wholeText.charAt(i);
             element.textContent += letter;
         }

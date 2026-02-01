@@ -144,6 +144,10 @@ body {
   height: 100vh;
 }
 
+#quoteAndStoneDiv {
+  max-width: 30%;
+}
+
 footer {
   margin: auto;
 }

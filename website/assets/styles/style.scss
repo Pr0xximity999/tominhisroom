@@ -63,16 +63,6 @@ body{
     margin-left: auto;
     margin-right: auto;
   }
-  #topRow{
-    display: flex;
-    flex-direction: row;
-  }
-  #quoteAndStoneDiv{
-    max-width: 30%;
-  }
-  #docsThumbnail{
-    max-width: 18em;
-  }
 }
 @media screen and (max-width: 1100px)
 {
@@ -80,13 +70,6 @@ body{
     display: none;
   }
   #pageBody{
-    display: flex;
-    flex-direction: column;
-  }
-  #docsThumbnail{
-    max-width: 100%;
-  }
-  #topRow {
     display: flex;
     flex-direction: column;
   }
@@ -99,6 +82,11 @@ body{
 
 @media screen and (min-width: 900px) // Mobile
 {
+  #topRow{
+    display: flex;
+    flex-direction: row;
+  }
+
   #docsDiv {
     margin-left: auto;
     margin-right: auto;
@@ -107,10 +95,6 @@ body{
 
 @media screen and (max-width: 900px)
 {
-  #welcomeAndDocsDiv{
-    display: flex;
-    flex-direction: column;
-  }
   #topRow{
     display: flex;
     flex-direction: column;
@@ -196,9 +180,6 @@ body{
 #background{
   height: 100vh;
 }
-#welcomeCard{
-  height: fit-content;
-}
 
 /// Main pages
 footer{
@@ -221,12 +202,9 @@ footer{
   width: 100vw; 
   height: 100vh;
 }
-#docsDiv {
-  max-width: fit-content;
-  height: fit-content;
-}
-#docsThumbnail{
-  max-height: 100%;
+#docsDiv, #docsThumbnail{
+  max-width: 18em;
+  max-height: 180px;
 }
 #quoteDiv{
   margin-bottom: 0;

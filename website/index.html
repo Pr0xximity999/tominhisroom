@@ -29,36 +29,34 @@
         <div id="pageBody" class="flex-row">
             <div id="mainBody">
                 <div id="topRow">
-                    <div id="welcomeAndDocsDiv" class="flex-row">
-                        <div id="welcomeCard" class="cardBox flickerIn glow outerMargin">
-                            <h1>Hellooo</h1>
-                            <p>Welcome to my amazing website!!!</p>
-                            <p></p>
-                            <a href="pages/fridge.html">Click for cool plant in fridge</a><br>
-                            <button id="jermaButton" onclick="{
-    
-                                // Show him and play his noise
-                                var jermaDiv = document.getElementById('jermaDiv')
-                                jermaDiv.style.display = 'block';
-                                document.getElementById('jermaSound').play()
-    
-                                // Remove all evidence
-                                new Promise(resolve => setTimeout(resolve, '2000')).then(() =>{
-                                    document.getElementById('jermaSound').remove();
-                                    document.getElementById('jermaDiv').remove();
-                                    document.getElementById('jermaButton').remove();
-                                });
-                                }">Click for jerma jumpscare</button> 
-                        </div>
-                        <div id="docsDiv" class="cardBox flickerIn glow outerMargin rounded">
-                            <a href="https://docs.tominhisroom.dev">
-                                <img id="docsThumbnail" src="https://docs.tominhisroom.dev/static/og-image.png" alt="the clickable image to my docs and notes website">
-                            </a>
-                        </div>
+                    <div id="welcomeCard" class="cardBox flickerIn glow outerMargin">
+                        <h1>Hellooo</h1>
+                        <p>Welcome to my amazing website!!!</p>
+                        <p></p>
+                        <a href="pages/fridge.html">Click for cool plant in fridge</a><br>
+                        <button id="jermaButton" onclick="{
+
+                            // Show him and play his noise
+                            var jermaDiv = document.getElementById('jermaDiv')
+                            jermaDiv.style.display = 'block';
+                            document.getElementById('jermaSound').play()
+
+                            // Remove all evidence
+                            new Promise(resolve => setTimeout(resolve, '2000')).then(() =>{
+                                document.getElementById('jermaSound').remove();
+                                document.getElementById('jermaDiv').remove();
+                                document.getElementById('jermaButton').remove();
+                            });
+                            }">Click for jerma jumpscare</button> 
                     </div>
-                    <div id="quoteAndStoneDiv" class="flex-column">
+                    <div id="docsDiv" class="cardBox flickerIn glow outerMargin rounded">
+                        <a href="https://docs.tominhisroom.dev">
+                            <img id="docsThumbnail" src="https://docs.tominhisroom.dev/static/og-image.png" alt="the clickable image to my docs and notes website">
+                        </a>
+                    </div>
+                    <div class="flex-column">
                         <div id="quoteDiv" class="cardBox flickerIn glow outerMargin">
-                            <h4 id="quoteText" class="slowWriter">>And i watched the water unfold~</h4>
+                            <h4 class="slowWriter">>And i watched the water unfold~</h4>
                         </div>
                         <div id="poopStoneDiv" class="cardBox flickerIn glow outerMargin">
                             <h3><a class="noGlitch" href="https://noita.wiki.gg/wiki/Kakkakikkare" target="_blank">NOITA POOP STONE</a></h3>
@@ -118,6 +116,7 @@
                         <li><b class="glitchText">DONE |</b>A pretty quotes block with animation</li>
                         <li><b class="glitchText">IN PROGRESS |</b>A changelog place</li>
                         <li><b class="glitchText">IN PROGRESS |</b>A page for my photos</li>
+                        <li><b class="glitchText">IN PROGRESS |</b>A pretty quotes block with animation</li>
                         <li>Some place to put my updates on (probably also the blog page lol)</li>
                         <li>A daily user counter</li>
                         <li>An about me page</li>
@@ -135,9 +134,7 @@
 <audio id="electricalHum" loop>
     <source src="assets/audio/ElectricalHum.wav" type="audio/wav">
 </audio>
-<!-- Order V important!!!! (hi random stranger!! :3) -->
 <script src="scripts/startup-flicker.js"></script>
-<script src="scripts/quoter.js"></script>
 <script src="scripts/slowWriter.js"></script>
 <script>
     window.onload = function(){

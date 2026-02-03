@@ -99,7 +99,11 @@ body{
 
 @media screen and (min-width: 900px) // Mobile
 {
-  #docsDiv {
+ 
+  #mainBody{
+    width: 60vw;
+  }
+ #docsDiv {
     margin-left: auto;
     margin-right: auto;
   }
@@ -107,6 +111,9 @@ body{
 
 @media screen and (max-width: 900px)
 {
+  #mainBody{
+    width: 100vw;
+  }
   #welcomeAndDocsDiv{
     display: flex;
     flex-direction: column;
@@ -136,10 +143,6 @@ body{
 }
 
 /// Main pages
-
-#mainBody{
-  width: 60vw;
-}
 #jermaHidden{
   position: fixed;
 }

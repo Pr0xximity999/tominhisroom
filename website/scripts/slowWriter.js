@@ -43,8 +43,23 @@ for(let element of swElements)
 
     // Wait until the element flickered in and then start writing
     waitUntil(checkedElement.id, async () => {
+        
+        let typingSpeed = 70;
+        let slowdownThreshhold = 15;
+        let slowdownCurve= 1.5;
+        let slowdownIncrease = 10
+
         for (let i = 0; i < wholeText.length; i++) {     
-            await delay(100);
+            
+            // Slow down at the end of the sentence
+            let remaining = wholeText.length - i;
+            if(remaining < slowdownThreshhold){
+                await delay(typingSpeed + (slowdownIncrease * (slowdownThreshhold - remaining)^slowdownCurve))
+            }
+            else{
+                await delay(typingSpeed);
+            }
+
             var letter = wholeText.charAt(i);
             element.textContent += letter;
         }

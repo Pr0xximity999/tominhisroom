@@ -8,7 +8,10 @@ var qoutes = [
     `It is tempting to linger in this moment, while every possibility still exists.\n 
     But unless they are collapsed by an observer, they will never be more than possibilities.`,
     "And for the first time in a million fears, i remember your smile <3",
-    "And the universe said i love you because you are love ♥"
+    "And the universe said i love you because you are love ♥",
+    "Can't talk, gotta catch the next stoplight cycle",
+    "Everything will be ok in the end!\nIf it's not ok, it is not the end",
+    "To be gentle, to be kind~"
 ]
 
 var index = Math.floor(Math.random() * qoutes.length);

@@ -14,9 +14,10 @@ var qoutes = [
     "To be gentle, to be kind~",
     "How lucky i am to have someone that makes saying goodbye so hard",
     "Heya! stranger :3",
-    "also try oldmartijntje.nl!",
+    "Also try oldmartijntje.nl!",
     "The typerrrrrrr",
-    "Crazy? i was crazy once.\nThey locked me in a room. A rubber Room. A rubber room with rats.\nAnd rats make me crazy!"
+    "Crazy? i was crazy once.\nThey locked me in a room. A rubber Room. A rubber room with rats.\nAnd rats make me crazy!",
+    "I found a letter: \"Dear future me..."
 ]
 
 var index = Math.floor(Math.random() * qoutes.length);

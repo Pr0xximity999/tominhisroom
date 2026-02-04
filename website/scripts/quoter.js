@@ -11,7 +11,12 @@ var qoutes = [
     "And the universe said i love you because you are love ♥",
     "Can't talk, gotta catch the next stoplight cycle",
     "Everything will be ok in the end!\nIf it's not ok, it is not the end",
-    "To be gentle, to be kind~"
+    "To be gentle, to be kind~",
+    "How lucky i am to have someone that makes saying goodbye so hard",
+    "Heya! stranger :3",
+    "also try oldmartijntje.nl!",
+    "The typerrrrrrr",
+    "Crazy? i was crazy once.\nThey locked me in a room. A rubber Room. A rubber room with rats.\nAnd rats make me crazy!"
 ]
 
 var index = Math.floor(Math.random() * qoutes.length);

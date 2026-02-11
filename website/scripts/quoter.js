@@ -18,7 +18,8 @@ var qoutes = [
     "The typerrrrrrr",
     "Crazy? i was crazy once.\nThey locked me in a room. A rubber Room. A rubber room with rats.\nAnd rats make me crazy!",
     "I found a letter: \"Dear future me...",
-    "Prepare to be boarded!"
+    "Prepare to be boarded!",
+    "haaaaaaiiiiii :3"
 ]
 
 var index = Math.floor(Math.random() * qoutes.length);

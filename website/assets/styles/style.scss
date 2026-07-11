@@ -42,88 +42,6 @@ body{
 }
 
 
-/// 
-/// Reactivity
-/// 
-
-.flex-column{
-  display: flex;
-  flex-direction: column;
-}
-.flex-row{
-  display: flex;
-  flex-direction: row;
-}
-
-/// Screen sizes
-/// max = below that vlue
-/// min = above that value
-@media screen and (min-width: 1100px){
-  #docsDiv {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #topRow{
-    display: flex;
-    flex-direction: row;
-  }
-  #quoteAndStoneDiv{
-    max-width: 30%;
-  }
-  #docsThumbnail{
-    max-width: 18em;
-  }
-}
-@media screen and (max-width: 1100px)
-{
-  #sideBarLeft{
-    display: none;
-  }
-  #pageBody{
-    display: flex;
-    flex-direction: column;
-  }
-  #docsThumbnail{
-    max-width: 100%;
-  }
-  #topRow {
-    display: flex;
-    flex-direction: column;
-  }
-  #sideBarRight{
-    width: 60vw
-  }
-}
-
-
-
-@media screen and (min-width: 900px) // Mobile
-{
- 
-  #mainBody{
-    width: 60vw;
-  }
- #docsDiv {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (max-width: 900px)
-{
-  #mainBody{
-    width: 100vw;
-  }
-  #welcomeAndDocsDiv{
-    display: flex;
-    flex-direction: column;
-  }
-  #topRow{
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 ///
 /// Global positionings
 /// 
@@ -404,3 +322,92 @@ a[href]:hover:not(.noGlitch){
       text-shadow: 0.6208764473832513px -10 1px rgba(0,30,255,0.5), -0.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     }
   }
+
+
+/// 
+/// Reactivity
+/// 
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+/// Screen sizes
+/// max = below that vlue
+/// min = above that value
+@media screen and (min-width: 1100px){
+  #docsDiv {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #topRow{
+    display: flex;
+    flex-direction: row;
+  }
+  #quoteAndStoneDiv{
+    max-width: 30%;
+  }
+  #docsThumbnail{
+    max-width: 18em;
+  }
+}
+@media screen and (max-width: 1100px)
+{
+  #sideBarLeft{
+    display: none;
+  }
+  #pageBody{
+    display: flex;
+    flex-direction: column;
+  }
+  #docsThumbnail{
+    max-width: 100%;
+  }
+  #topRow {
+    display: flex;
+    flex-direction: column;
+  }
+  #sideBarRight{
+    width: 60vw
+  }
+}
+
+
+
+@media screen and (min-width: 900px) // Mobile
+{
+ 
+  #mainBody{
+    width: 60vw;
+  }
+ #docsDiv {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 900px)
+{
+  #mainBody{
+    width: 100vw;
+  }
+  #welcomeAndDocsDiv{
+    display: flex;
+    flex-direction: row;
+  }
+  #welcomeCard{
+    height: 100%;
+  }
+  #docsThumbnail{
+    height: 100%;
+  }
+  #topRow{
+    display: flex;
+    flex-direction: column;
+  }
+}

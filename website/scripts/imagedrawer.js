@@ -1,20 +1,16 @@
-fetch("./assets/images/image-drawer/images.json")
+var endpoint = "image-carrousel"
+
+fetch(`https://ichor.ivorylotus.dev/${endpoint}/?ls`)
     .then(response => response.json())
     .then(data => {
         var div = document.getElementById('gifCarrouselContents');
-        data.forEach(image => {
-            if(image.split('.')[1] !== 'json')
-            {
-                var img = new Image();
-                img.src = `./assets/images/image-drawer/${image}`;
-                img.className = 'gifCarrouselImage';
-                div.appendChild(img);
-            }
+        var div = document.getElementById('gifCarrouselContents');
+        var images = data.files;
+        images.forEach(image => {
+            var img = new Image();
+            img.src = `https://ichor.ivorylotus.dev/${endpoint}/${image.href}`;
+            img.className = 'gifCarrouselImage';
+            div.appendChild(img);
         });
     })
-    .catch(error => console.error("Error loading image json: " + error))
-
-
-
-
-
+    .catch(error => console.error("Error fetching image data: " + error))

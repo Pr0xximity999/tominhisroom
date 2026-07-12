@@ -4,7 +4,6 @@ fetch(`https://ichor.ivorylotus.dev/${endpoint}/?ls`)
     .then(response => response.json())
     .then(data => {
         var div = document.getElementById('gifCarrouselContents');
-        var div = document.getElementById('gifCarrouselContents');
         var images = data.files;
         images.forEach(image => {
             var img = new Image();
